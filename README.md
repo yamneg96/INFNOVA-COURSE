@@ -1,73 +1,193 @@
-# React + TypeScript + Vite
+# INFNOVA Frontend Engineering Challenge
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+  A pixel-accurate, fully responsive frontend implementation based on the provided Figma design.
 
-Currently, two official plugins are available:
+  This project was built as part of the **INFNOVA Frontend Internship Engineering Challenge**, focusing on clean UI implementation, strong architecture, and polished UX.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🔧 Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+  * **Framework:** React 18
+  * **Build Tool:** Vite
+  * **Language:** TypeScript
+  * **Styling:** TailwindCSS
+  * **Data Fetching:** TanStack Query (React Query)
+  * **Routing:** React Router
+  * **Animations:** Framer Motion
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🚀 Live Demo
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+  [Live Demo](https://infnova-frontend.vercel.app)
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 📦 GitHub Repository
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+  [GitHub Repo](https://github.com/yamneg96/INFNOVA-COURSE.git)
+
+---
+
+## 📌 Features Implemented
+
+### 1. Pixel-Accurate UI
+  * Strict adherence to Figma layout
+  * Accurate spacing scale
+  * Proper border radius and shadows
+  * Consistent typography hierarchy
+  * Correct image aspect ratios
+  * Grid alignment and spacing precision
+
+### 2. Fully Responsive Design
+  * Mobile-first implementation
+  * **Breakpoints:** 1 column (mobile), 2 columns (tablet), 3 columns (desktop)
+  * Course detail layout stacks properly on smaller screens
+  * Responsive paddings and container widths
+
+### 3. API Integration
+* Integrated with the provided endpoints:
+    * `GET https://infnova-course-api.vercel.app/api/courses`
+    * `GET https://infnova-course-api.vercel.app/api/courses/:id`
+* Data fetching handled via **TanStack Query**
+* Cached queries and configured stale time
+* Automatic refetch control
+
+### 4. Loading States
+  * Implemented professional skeleton loaders to improve perceived performance
+  * Grid skeletons for course list
+  * Detail page content skeleton
+  * Smooth fade-in transitions
+
+### 5. Error Handling
+* **Graceful fallback UI:**
+    * User-friendly error messages
+    * Clean visual presentation
+    * No broken UI rendering
+
+### 6. UX Polish
+  * Smooth fade-in transitions (**Framer Motion**)
+  * Hover lift animation on cards
+  * Button hover states and active feedback
+  * Focus ring accessibility
+  * Smooth route transitions
+  * Subtle elevation effects
+
+### 7. Code Quality & Architecture
+* **Clear separation of concerns:**
+    * `src/api/` → API layer
+    * `src/hooks/` → TanStack query hooks
+    * `src/components/` → Reusable UI + domain components
+    * `src/pages/` → Route-level pages
+    * `src/layouts/` → Layout wrappers
+    * `src/types/` → Strong TypeScript types
+    * `src/router/` → Centralized routing
+
+---
+
+## 📁 Folder Structure
+
+```text
+src/
+ ├── api/
+ │    ├── client.ts
+ │    └── courses.ts
+ ├── components/
+ │    ├── layout/
+ │    │    ├── Navbar.tsx
+ │    │    └── Footer.tsx
+ │    ├── course/
+ │    │    ├── CourseCard.tsx
+ │    │    ├── CourseGrid.tsx
+ │    │    ├── CourseHero.tsx
+ │    │    ├── InstructorCard.tsx
+ │    │    └── EnrollCard.tsx
+ │    └── ui/
+ │         ├── Button.tsx
+ │         ├── Badge.tsx
+ │         ├── Skeleton.tsx
+ │         ├── ErrorState.tsx
+ │         └── Container.tsx
+ ├── hooks/
+ │    ├── useCourses.ts
+ │    └── useCourse.ts
+ ├── layouts/
+ │    └── MainLayout.tsx
+ ├── pages/
+ │    ├── CoursesPage.tsx
+ │    └── CourseDetailPage.tsx
+ ├── types/
+ │    └── course.ts
+ └── router/
+      └── index.tsx
+
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🧠 Architectural Decisions
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+  * **Why TanStack Query?** Clean separation of server state, built-in caching, and production-grade loading/error management.
+  * **Why Component Segmentation?** Encourages reusability, testability, and long-term maintainability.
+  * **Why TypeScript?** Ensures safer API integration with clear data contracts and a better developer experience.
+
+---
+
+## ⚙️ Setup Instructions
+
+### 1. Clone Repository
+
+  ```bash
+  git clone <your-repo-link>
+  cd infnova-frontend
+
+  ```
+
+### 2. Install Dependencies
+
+  ```bash
+  npm install
+
+  ```
+
+### 3. Run Development Server
+
+  ```bash
+  npm run dev
+
+  ```
+
+### 4. Build for Production
+
+  ```bash
+  npm run build
+
+  ```
+
+---
+
+## 🎯 Evaluation Alignment
+
+  | Criteria | Implementation |
+  | --- | --- |
+  | **Visual Accuracy** | Precise spacing, layout, and typography |
+  | **Responsiveness** | Mobile-first responsive grid system |
+  | **Code Quality** | Structured folders, clean naming, and strong typing |
+  | **UX Polish** | Skeletons, Framer Motion animations, and hover states |
+
+---
+
+## 🔍 Performance Considerations
+
+  * Query caching with `staleTime` to reduce unnecessary API calls.
+  * Minimized re-renders through proper component memoization.
+  * Optimized image rendering and lightweight animation usage.
+
+## 📝 Notes
+
+  The primary implementation integrates directly with the official API. In the event of CORS restrictions during local development, a proxy or local mock data can be toggled via the API layer.
+
+---
+
+**👤 Author** 
+**Yamlak** 
+*Lead Frontend Developer*
