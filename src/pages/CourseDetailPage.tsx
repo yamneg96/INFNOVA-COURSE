@@ -1,4 +1,3 @@
-import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useCourse } from '../hooks/useCourse';
 import { ArrowLeft, CheckCircle2, BookOpen, Clock, Users, Star, Shield, Smartphone, Download, Award, Infinity } from 'lucide-react';

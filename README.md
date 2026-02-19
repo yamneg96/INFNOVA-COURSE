@@ -20,7 +20,7 @@
 
 ## 🚀 Live Demo
 
-  [Live Demo](https://infnova-frontend.vercel.app)
+  [Live Demo](https://infnova-course.vercel.app)
 
 ## 📦 GitHub Repository
 

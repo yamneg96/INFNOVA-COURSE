@@ -1,6 +1,3 @@
-import React from 'react';
-import { Button } from '../ui/Button';
-
 interface Props {
   enrolled: boolean;
   price: number;
@@ -11,14 +8,13 @@ export default function EnrollCard({ enrolled, price, onEnroll }: Props) {
   return (
     <div className="p-6 bg-white rounded-xl shadow-lg flex flex-col items-center gap-4">
       <div className="text-lg font-semibold">{price ? `$${price}` : 'Free'}</div>
-      <Button
-        variant="primary"
+      <button
+        className="bg-blue-600 hover:bg-blue-700 text-white w-full px-4 py-2 rounded-md font-semibold transition"
         disabled={enrolled}
         onClick={onEnroll}
-        className="w-full"
       >
         {enrolled ? 'Enrolled' : 'Enroll Now'}
-      </Button>
+      </button>
     </div>
   );
 }

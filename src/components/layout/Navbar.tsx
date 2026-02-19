@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu } from 'lucide-react';
 import headerImg from '../../assets/Logo.png';
@@ -11,7 +10,7 @@ const navLinks = [
 ];
 
 export default function Navbar() {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = React.useState(false);
   const location = useLocation();
   return (
     <nav className="bg-white shadow-md sticky top-0 z-20">

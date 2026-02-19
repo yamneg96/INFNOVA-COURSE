@@ -1,8 +1,5 @@
-import React from 'react';
-import type { Instructor } from '../../types/course';
-
 interface Props {
-  instructor: Instructor;
+  instructor: { name: string; bio: string; avatar: string };
 }
 
 export default function InstructorCard({ instructor }: Props) {

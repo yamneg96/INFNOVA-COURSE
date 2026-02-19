@@ -1,5 +1,4 @@
-import React from 'react';
-import { Search, Clock, Users, Star, ChevronDown } from 'lucide-react';
+import { Search, ChevronDown } from 'lucide-react';
 import { useCourses } from '../hooks/useCourses';
 import CourseGrid from '../components/course/CourseGrid';
 import { Skeleton } from '../components/ui/Skeleton';
