@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-export const API_BASE = import.meta.env.API_BASE || "http://localhost:5000/api";
+export const API_BASE = import.meta.env.API_BASE || 'https://infnova-course-api.vercel.app/api';
 
 export const api = axios.create({
   baseURL: API_BASE,
