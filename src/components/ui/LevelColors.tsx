@@ -1,5 +1,3 @@
-import React from 'react';
-
 const LEVEL_COLORS: Record<string, string> = {
   "Beginner": "bg-green-100 text-green-600",
   "Intermediate": "bg-blue-100 text-blue-600",

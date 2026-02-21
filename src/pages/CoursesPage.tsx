@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import { useState, useMemo } from 'react';
 import { Search } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useCourses } from '../hooks/useCourses';
