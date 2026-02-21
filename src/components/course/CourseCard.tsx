@@ -2,21 +2,13 @@ import { Clock, Users, Star } from 'lucide-react';
 import { Link } from "react-router-dom";
 import type { Course } from "../../types/course";
 import { motion } from "framer-motion";
+import LevelBadge from "../ui/LevelColors";
 
 interface Props {
   course: Course;
 }
 
-const LEVEL_COLORS: Record<string, string> = {
-  "Beginner": "bg-green-100 text-green-600",
-  "Intermediate": "bg-blue-100 text-blue-600",
-  "Advanced": "bg-purple-100 text-purple-600",
-};
-
 export default function CourseCard({ course }: Props) {
-  const displayLevel = course.level || "Beginner";
-  const levelClass = LEVEL_COLORS[displayLevel] || "bg-slate-100 text-slate-600";
-
   return (
     <motion.div
       whileHover={{ y: -6, boxShadow: "0 8px 24px rgba(0,0,0,0.08)" }}
@@ -34,11 +26,8 @@ export default function CourseCard({ course }: Props) {
             loading="lazy" 
           />
           
-          {course.level && (
-            <span className={`absolute top-3 right-3 px-3 py-1 rounded-full text-[10px] ${levelClass} bg-white/90 backdrop-blur-sm`}>
-              {course.level}
-            </span>
-          )}
+          {/* Use the imported component here */}
+          <LevelBadge level={course.level} />
         </div>
         
         <div className="p-6">
