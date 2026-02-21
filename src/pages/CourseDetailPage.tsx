@@ -3,7 +3,6 @@ import { useCourse } from '../hooks/useCourse';
 import { ArrowLeft, CheckCircle2, BookOpen, Clock, Users, Star, Shield, Smartphone, Download, Award, Infinity } from 'lucide-react';
 import { Skeleton } from '../components/ui/Skeleton';
 import { ErrorState } from '../components/ui/ErrorState';
-import Footer from '../components/layout/Footer';
 
 export default function CourseDetailPage() {
   const { id } = useParams<{ id: string }>();
@@ -129,7 +128,6 @@ export default function CourseDetailPage() {
           </div>
         </aside>
       </main>
-      <Footer />
     </div>
   );
 }

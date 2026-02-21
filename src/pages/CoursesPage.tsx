@@ -21,7 +21,7 @@ export default function CoursesPage() {
       </header>
       {/* Filters & Search */}
       <section className="max-w-6xl mx-auto px-8 -mt-8">
-        <div className="bg-white p-4 rounded-lg shadow-lg flex flex-col md:flex-row gap-4 border">
+        <div className="bg-white p-4 rounded-lg shadow-lg flex flex-col md:flex-row gap-4">
           <div className="relative flex-grow">
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 w-5 h-5" />
             <input 
