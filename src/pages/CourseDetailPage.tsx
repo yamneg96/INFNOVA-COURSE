@@ -41,7 +41,7 @@ export default function CourseDetailPage() {
       </div>
 
       {/* Hero Header Section */}
-      <header className="bg-[#FF6900] text-white py-16 px-8 relative">
+      <header className="bg-gradient-to-r from-[#FF6900] to-[#F54900] text-white py-16 px-8 relative">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-12 items-center relative z-10">
           <div className="flex-1">
             <span className="text-orange-100/80 text-[10px] font-bold tracking-[0.2em] uppercase">
@@ -116,7 +116,7 @@ export default function CourseDetailPage() {
           <section className="bg-white p-10 rounded-2xl border border-slate-100 shadow-sm">
             <h2 className="text-2xl font-bold mb-8">Your Instructor</h2>
             <div className="flex items-center gap-6">
-              <div className="w-20 h-20 bg-[#FF6900] rounded-full flex items-center justify-center text-white font-bold text-2xl shrink-0 shadow-lg">
+              <div className="w-20 h-20 bg-gradient-to-r from-[#FF8904] to-[#F54900] rounded-full flex items-center justify-center text-white font-bold text-2xl shrink-0 shadow-lg">
                 {course.instructor.split(' ').map(n => n[0]).join('')}
               </div>
               <div>
@@ -137,10 +137,10 @@ export default function CourseDetailPage() {
             <p className="text-slate-400 text-sm mb-8">Join {course.enrolled?.toLocaleString()} students already enrolled</p>
             
             <div className="space-y-4">
-              <button className="w-full bg-[#FF6900] text-white py-4 rounded-xl font-bold text-base hover:bg-orange-700 transition-all shadow-lg shadow-orange-100 active:scale-[0.98] cursor-pointer">
+              <button className="w-full bg-[#F54900] text-white py-4 rounded-xl font-bold text-base hover:bg-[#F55900] transition-all shadow-lg shadow-orange-100 active:scale-[0.98] cursor-pointer">
                 Enroll Now
               </button>
-              <button className="w-full border-2 border-slate-100 text-slate-600 py-4 rounded-xl font-bold text-base hover:bg-slate-50 transition-all cursor-pointer">
+              <button className="w-full border-2 border-[#F54900] text-[#F54900] py-4 rounded-xl font-bold text-base hover:bg-slate-50 transition-all cursor-pointer">
                 Add to Wishlist
               </button>
             </div>

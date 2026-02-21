@@ -56,7 +56,7 @@ export default function CoursesPage() {
   return (
     <div className="min-h-screen bg-white font-sans text-slate-800">
       {/* Hero Section */}
-      <header className="bg-orange-600 text-white py-16">
+      <header className="bg-gradient-to-r from-[#FF6900] to-[#F54900] text-white py-16">
         <div className="max-w-6xl mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -74,7 +74,7 @@ export default function CoursesPage() {
 
       {/* Filters & Search - Floating Card */}
       <section className="max-w-6xl mx-auto px-4 relative z-10">
-        <div className="bg-white p-4 rounded-xl shadow-2xl border border-slate-100 flex flex-col md:flex-row gap-4">
+        <div className="bg-white p-4 rounded-xl shadow-2xl border border-slate-100 flex flex-col md:flex-row gap-4 mt-4">
           {/* Search Input */}
           <div className="relative flex-grow">
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 w-5 h-5" />
@@ -129,7 +129,7 @@ export default function CoursesPage() {
       </section>
 
       {/* Main Content Area */}
-      <main className="max-w-6xl mx-auto px-4 py-10 min-h-[400px]">
+      <main className="max-w-6xl mx-auto px-4 py-10">
         {/* Error Handling */}
         <AnimatePresence>
           {isError && <ErrorState message="Failed to fetch courses. Please check your connection." />}
