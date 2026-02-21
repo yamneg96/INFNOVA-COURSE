@@ -120,7 +120,7 @@ export default function CoursesPage() {
           {(search || category || level) && (
             <button 
               onClick={clearFilters}
-              className="text-orange-600 text-sm font-semibold hover:text-orange-700 underline"
+              className="cursor-pointer text-orange-600 text-sm font-semibold hover:text-orange-700 underline"
             >
               Reset Filters
             </button>
