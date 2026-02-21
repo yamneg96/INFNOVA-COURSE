@@ -84,43 +84,52 @@
 
 ---
 
-## 📁 Folder Structure
+## 🎨 Color System & UX Polish
 
-```text
-src/
- ├── api/
- │    ├── client.ts
- │    └── courses.ts
- ├── components/
- │    ├── layout/
- │    │    ├── Navbar.tsx
- │    │    └── Footer.tsx
- │    ├── course/
- │    │    ├── CourseCard.tsx
- │    │    ├── CourseGrid.tsx
- │    │    ├── CourseHero.tsx
- │    │    ├── InstructorCard.tsx
- │    │    └── EnrollCard.tsx
- │    └── ui/
- │         ├── Button.tsx
- │         ├── Badge.tsx
- │         ├── Skeleton.tsx
- │         ├── ErrorState.tsx
- │         └── Container.tsx
- ├── hooks/
- │    ├── useCourses.ts
- │    └── useCourse.ts
- ├── layouts/
- │    └── MainLayout.tsx
- ├── pages/
- │    ├── CoursesPage.tsx
- │    └── CourseDetailPage.tsx
- ├── types/
- │    └── course.ts
- └── router/
-      └── index.tsx
+- **Primary Button & Action Color:** #FF6900 (used for enroll/signin buttons, left side of gradients)
+- **Accent/Secondary Orange:** #F54900 (used for right side of gradients, other orange UI parts)
+- **Teacher Profile Gradient:** #FF8904 (left) to #F54900 (right)
+- **Why:** These colors were chosen for strong visual hierarchy, accessibility, and brand consistency. Gradients are used to create depth and highlight key actions and sections.
 
-```
+---
+
+## 🧭 Navigation Experience
+
+- **Scroll-to-Top:** When navigating between pages, the scroll position resets to the top for a consistent and professional user experience. This is handled via a custom router utility.
+
+---
+
+## 📁 Folder Structure (Expanded Rationale)
+
+- **Modular Organization:** Each folder has a clear responsibility, supporting separation of concerns and scalability.
+- **Domain-Driven Components:** Components are grouped by domain (course, layout, ui) for easy maintenance and reusability.
+- **Centralized Routing:** All navigation logic is in `src/router/`, making route management straightforward.
+- **Type Safety:** Types are defined in `src/types/` for consistent data contracts across the app.
+- **API Layer:** All backend communication is abstracted in `src/api/`, allowing easy updates and testing.
+- **Custom Hooks:** Data fetching and business logic are encapsulated in `src/hooks/`, promoting DRY principles.
+- **Layouts:** Shared page layouts are in `src/layouts/`, ensuring consistent structure and easy global changes.
+
+---
+
+## 🏆 Architectural Strengths
+
+- **Scalability:** Structure supports easy feature addition and team collaboration.
+- **Maintainability:** Clear boundaries and strong typing reduce bugs and speed up onboarding.
+- **Industry Alignment:** Follows patterns used in large-scale React projects, making it familiar to new developers.
+- **Accessibility & UX:** Color choices, focus rings, and scroll management ensure a polished, accessible experience.
+
+---
+
+## 📚 Documentation & Onboarding
+
+- The folder structure and architectural choices are documented for easy onboarding and future maintenance.
+- All major design and UX decisions are explained for transparency and knowledge sharing.
+
+---
+
+## 📦 GitHub Repository
+
+  [GitHub Repo](https://github.com/yamneg96/INFNOVA-COURSE.git)
 
 ---
 
@@ -137,8 +146,8 @@ src/
 ### 1. Clone Repository
 
   ```bash
-  git clone <your-repo-link>
-  cd infnova-frontend
+  git clone https://github.com/yamneg96/INFNOVA-COURSE
+  cd INFNOVA-COURSE
 
   ```
 
