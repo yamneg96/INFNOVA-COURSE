@@ -21,7 +21,7 @@ export default function CourseDetailPage() {
     <div className="min-h-screen bg-slate-50 font-sans text-slate-800">
       {/* Back Button */}
       <div className="max-w-6xl mx-auto px-8 py-4">
-        <button onClick={() => navigate(-1)} className="flex items-center gap-2 text-slate-500 hover:text-slate-800 text-sm transition font-medium">
+        <button onClick={() => navigate(-1)} className="cursor-pointer flex items-center gap-2 text-slate-500 hover:text-slate-800 text-sm transition font-medium">
           <ArrowLeft size={16} /> Back to Courses
         </button>
       </div>
